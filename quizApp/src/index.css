@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #4f46e5; /* indigo-600 */
+    --color-secondary: #10b981; /* emerald-500 */
+    --color-dark: #1f2937; /* gray-800 */
+  }
+
+  /* Dark mode variables */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: #4338ca; /* darker indigo */
+      --color-secondary: #059669; /* darker emerald */
+      --color-dark: #111827; /* darker gray */
+    }
+  }
+}
+
+body {
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+.dark body {
+  background-color: #111827; /* gray-900 */
+  color: #e5e7eb; /* gray-200 */
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--color-primary);
+}
+
+.focus\:border-primary:focus {
+  border-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
